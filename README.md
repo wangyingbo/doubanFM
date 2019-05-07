@@ -1,8 +1,8 @@
-# electron-quick-start
+# doubanFM
 
-**Clone and run for a quick way to see Electron in action.**
+**用Electron写的豆瓣FM客户端**
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+This is a minimal Electron application based on the [豆瓣]() within the Electron documentation.
 
 **Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
 
@@ -20,9 +20,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/wangyingbo/doubanFM.git
 # Go into the repository
-cd electron-quick-start
+cd doubanFM
 # Install dependencies
 npm install
 # Run the app
@@ -42,4 +42,4 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 
 ## License
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+[Apache-2.0 (Public Domain)](LICENSE)
