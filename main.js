@@ -5,6 +5,9 @@ const {app, BrowserWindow} = require('electron')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
+/**
+ * 创建window
+ */
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -15,12 +18,26 @@ function createWindow () {
     }
   })
 
+  //loadFile是3.x以上用法
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  //mainWindow.loadURL('https://douban.fm');
+  const path = require('path')
+  mainWindow.loadFile(path.join(__dirname, 'index.html'))
+  mainWindow.reload()
 
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  //loadURL是1.x和2.x的用法
+  // const url = require('url')
+  // mainWindow.loadURL(url.format({
+  //   pathname: path.join(__dirname, 'index.html'),
+  //   protocol: 'file:',
+  //   slashes: true
+  // }))
 
+
+  // Open the DevTools.打开开发者模式
+  //mainWindow.webContents.openDevTools()
+
+  //window被关闭时，走下面的方法
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
@@ -30,10 +47,18 @@ function createWindow () {
   })
 }
 
+//app刚启动时，走下面的方法
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
+
+// app.on('ready',()=>{
+//   console.log('。。日了狗了。。')
+//   require('./renderer.js')
+//       const home = require('./home.js')
+//       home.homeRequest();
+// })
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
