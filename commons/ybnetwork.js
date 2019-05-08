@@ -3,8 +3,14 @@
 //基类url地址
 var baseUrl = "https://github.com"
 
-
-
+/**
+ * 网络请求的参数
+ */
+var parameters = {
+  url:"",
+  success: (response)=> {},
+  failure: (error)=> {},
+}
 
 /**
  * 封装网络请求方法

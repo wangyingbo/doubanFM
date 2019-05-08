@@ -9,6 +9,7 @@ let mainWindow
  * 创建window
  */
 function createWindow () {
+  console.log('创建主窗口。。。')
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
@@ -56,7 +57,7 @@ app.setName('我的fm')
 app.on('ready', createWindow)
 
 app.on('ready',()=>{
-  console.log('main.js里响应home.js方法。。日了狗了。。')
+  console.log('main.js里app.on准备好了。。。')
   require('./renderer.js')
       const home = require('./home.js')
       home.homeRequest();
