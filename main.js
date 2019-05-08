@@ -47,18 +47,20 @@ function createWindow () {
   })
 }
 
+app.setName('我的fm')
+
 //app刚启动时，走下面的方法
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
 
-// app.on('ready',()=>{
-//   console.log('。。日了狗了。。')
-//   require('./renderer.js')
-//       const home = require('./home.js')
-//       home.homeRequest();
-// })
+app.on('ready',()=>{
+  console.log('main.js里响应home.js方法。。日了狗了。。')
+  require('./renderer.js')
+      const home = require('./home.js')
+      home.homeRequest();
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {

@@ -5,18 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",//program和protocol属性只有在node下可用
+            "name": "Debug Main Process",
+            "type": "node",
             "request": "launch",
-            "name": "Electron Main",
-            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
-            "program": "${workspaceFolder}/main.js",
-            "protocol": "inspector" //添加默认的协议是legacy，这个协议导致不进入断点
-        },
-        {
-            "type": "electron",
-            "request": "launch",
-            "name": "Launch Electron against the workspace",
-            "appDir": "${workspaceFolder}"
-        }
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "windows": {
+              "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            },
+            "args" : ["."],
+            "outputCapture": "std"
+          }
+
+
+        // {
+        //     "type": "node",//program和protocol属性只有在node下可用
+        //     "request": "launch",
+        //     "name": "Electron Main",
+        //     "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+        //     "program": "${workspaceFolder}/main.js",
+        //     "protocol": "inspector" //添加默认的协议是legacy，这个协议导致不进入断点
+        // }
     ]
 }
