@@ -19,6 +19,9 @@ function createWindow () {
     }
   })
 
+  //只能在app.ready完成以后调用
+  app.setAccessibilitySupportEnabled(true)
+
   //loadFile是3.x以上用法
   // and load the index.html of the app.
   //mainWindow.loadURL('https://douban.fm');
@@ -34,9 +37,8 @@ function createWindow () {
   //   slashes: true
   // }))
 
-
   // Open the DevTools.打开开发者模式
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   //window被关闭时，走下面的方法
   // Emitted when the window is closed.
