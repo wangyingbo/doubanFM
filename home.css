@@ -6,6 +6,8 @@
 /*------------------头部导航栏部分-------------------------*/
 
 .nav {
+    width: 100%;
+    position: absolute;
     background-color: rgba(250, 250, 250, 0.93);
 }
 
@@ -83,5 +85,72 @@
 .nav .qrCode div:last-child {
     margin-top: 20px;
 }
+
+/*-----------------------------音乐播放部分--------------------------------*/
+.playMusic {
+    padding-top: 150px;
+}
+
+.playMusic div .control {
+
+}
+
+.playMusic .control a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.playMusic div .play {
+    background: url("images/play.png") no-repeat center/cover;
+}
+
+.playMusic div .play:hover {
+    background: url("images/play_deep.png") no-repeat center/cover;
+}
+
+.playMusic div .pause {
+    background: url("images/pause.png") no-repeat center/cover;
+}
+
+.playMusic div .pause:hover {
+    background: url("images/pause_deep.png") no-repeat center/cover;
+}
+
+/*进度条*/
+.progress {
+    margin: 0 auto;
+    width: 600px;
+    height: 3px;
+    overflow: hidden;
+    background-color: rgb(196, 196, 196);
+    cursor: pointer;
+    top: 16px;
+    left: 45px;
+}
+
+/*播放进度*/
+.progress .line {
+    width: 0;
+    height: 100%;
+    background-color: rgb(107, 189, 122);
+    top: 0;
+    left: 0;
+}
+
+.playMusic .time {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.playMusic .time span {
+    font-size: 12px;
+    color: gray;
+}
+
 
 
