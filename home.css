@@ -78,7 +78,7 @@
     color: gray;
 }
 
-.nav .qrCode div:first-child {
+.nav .qrCode div:first-of-type {
     margin-top: 10px;
 }
 
