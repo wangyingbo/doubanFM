@@ -1,10 +1,4 @@
 $(function () {
-    $('#download').mouseenter(function () {
-        $('.nav .qrCode').show();
-    });
-    $('.nav .qrCode').mouseleave(function () {
-        $(this).hide();
-    });
     //播放、暂停按钮
     $('.playMusic .control a').on('click', function () {
         console.log('点击了');

@@ -3,6 +3,32 @@
     padding: 0;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+.clearFix::before,
+.clearFix::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+
 /*------------------头部导航栏部分-------------------------*/
 
 .nav {
@@ -17,42 +43,40 @@
     margin: 0 auto;
 }
 
-.nav .head img {
+.nav > .head > img {
     float: left;
-    display: inline-block;
     margin-top: 30px;
     width: 100px;
     height: 40px;
 }
 
 .nav .head .des {
+    position: relative;
     float: left;
     margin-top: 35px;
     margin-left: 15px;
 }
 
-.nav .head a {
-    text-decoration: none;
+.nav .head .des a {
+    display: block;
+}
+
+.nav .head .des a span {
     font-size: 12px;
     color: gray;
 }
 
-.nav .head .right {
-    margin-top: 35px;
-    float: right;
+.des:hover .qrCode {
+    display: block;
 }
 
-.nav .head .right span {
-    margin-left: 5px;
-    margin-right: 5px;
-    color: rgb(216, 216, 216);
-}
-
-.nav .qrCode {
-    position: fixed;
-    top: 35px;
-    left: 25%;
+.qrCode {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    position: absolute;
     display: none;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
     width: 207px;
     height: 260px;
@@ -68,7 +92,6 @@
 }
 
 .nav .qrCode div {
-
     text-align: center;
     font-size: 12px;
     color: gray;
@@ -85,6 +108,22 @@
 .nav .qrCode div:last-child {
     margin-top: 20px;
 }
+
+.nav .head .right {
+    margin-top: 35px;
+    float: right;
+}
+
+.nav .head .right a {
+    font-size: 12px;
+}
+
+.nav .head .right span {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(216, 216, 216);
+}
+
 
 /*-----------------------------音乐播放部分--------------------------------*/
 .playMusic {
