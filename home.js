@@ -4,7 +4,14 @@ function homeRequest() {
   console.log('home.js请求首页数据。。。')
   
   //首页数据请求
-  //ybnetwork.ybnetworkRequest({});
+  ybnetwork.ybnetworkRequest({
+    success:function (response) {
+
+    },
+    failure:function (error) {
+
+    }
+  });
 
   //打印根目录文件
   //logRootFile()
