@@ -7,7 +7,7 @@ var baseUrl = "https://www.baidu.com"
 /**
  * 网络请求的参数
  */
-var parameters = {
+var requestParameters = {
   baseUrl:"",
   url:"",
   success: (response)=> {},
@@ -17,7 +17,7 @@ var parameters = {
 /**
  * 封装网络请求方法
  */
-function ybnetworkRequest(parameters) {
+function ybnetworkRequest(r:parameters) {
   // const app = require('electron')
   // const { net } = require('electron')
   //   app.on('ready', () => {
