@@ -59,7 +59,6 @@ app.setName('我的fm')
 app.on('ready', createWindow)
 
 app.on('ready',()=>{
-  console.log('main.js里app.on准备好了。。。')
   require('./renderer.js')
       const home = require('./home.js')
       home.homeRequest();
