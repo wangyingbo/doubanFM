@@ -2,7 +2,7 @@ var public = require('./public.js')
 
 
 //全局基类url地址
-var baseUrl = "http://douban.fm/"
+var baseUrl = "http://douban.fm"
 
 /**
  * 网络请求的参数

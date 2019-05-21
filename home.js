@@ -4,7 +4,7 @@ function homeRequest() {
   console.log("home.js请求首页数据。。。")
   //首页数据请求
   ybnetwork.ybnetworkRequest({
-    url:'j/app/radio/channels',
+    url:'/j/v2/rec_channels?specific=all',//'/j/app/radio/channels'
     log:false,
     success:function (data) {
       console.log(`请求结果：${data}`)
